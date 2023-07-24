@@ -6,15 +6,15 @@ const contactAddSchema = Joi.object({
     }),
     email: Joi.string().required(),
     phone: Joi.string().required(),
-    favourite: Joi.boolean(),
+    favorite: Joi.boolean(),
 });
 
-const contactUpdateFavouriteSchema = Joi.object({
-    favourite: Joi.boolean().required(),
+const contactUpdateFavoriteSchema = Joi.object({
+    favorite: Joi.boolean().required(),
 });
 
 export default {
     contactAddSchema,
-    contactUpdateFavouriteSchema,
+    contactUpdateFavoriteSchema,
 };
 
