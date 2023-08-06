@@ -1,7 +1,7 @@
 import express from "express";
 import {getAll, add, getById, deleteById, updateById, updateFavorite} from "../../controllers/contacts/index.js";
 import {contactsSchemas} from "../../schemas/index.js";
-import { upload, isEmptyBody, isValidId, authenticate } from "../../middlewars/index.js";
+import { isEmptyBody, isValidId, authenticate } from "../../middlewars/index.js";
 import { validateBody } from "../../decorators/index.js";
 
 const contactsRouter = express.Router();
@@ -12,7 +12,7 @@ contactsRouter.get('/', getAll);
 
 contactsRouter.get('/:id', isValidId, getById);
 
-contactsRouter.post('/', upload.single("avatar"), isEmptyBody, validateBody(contactsSchemas.contactAddSchema), add);
+contactsRouter.post('/', isEmptyBody, validateBody(contactsSchemas.contactAddSchema), add);
 
 contactsRouter.put('/:id', isValidId, isEmptyBody, validateBody(contactsSchemas.contactAddSchema), updateById);
 
