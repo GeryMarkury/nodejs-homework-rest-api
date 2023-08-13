@@ -4,3 +4,4 @@ export { default as getCurrent } from './getCurrent.js';
 export { default as signout } from './signout.js';
 export { default as updateAvatar } from './updateAvatar.js';
 export { default as verify } from './verify.js';
+export { default as resendVerifyEmail } from './resendVerifyEmail.js';
