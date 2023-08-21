@@ -1,10 +1,11 @@
 import {User} from "../../models/index.js";
 import bcrypt from "bcrypt";
-import { HttpError, sendEmail } from "../../helpers/index.js";
+import { HttpError} from "../../helpers/index.js";
 import { ctrlWrapper } from "../../decorators/index.js";
 import gravatar from "gravatar";
 import { nanoid } from "nanoid";
 import "dotenv/config";
+import sendEmail from "../../services/email/sendEmail.js";
 
 const { BASE_URL } = process.env;
 

@@ -1,7 +1,8 @@
 import { User } from "../../models/index.js";
-import { HttpError, sendEmail } from "../../helpers/index.js";
+import { HttpError} from "../../helpers/index.js";
 import "dotenv/config";
 import { ctrlWrapper } from "../../decorators/index.js";
+import sendEmail from "../../services/email/sendEmail.js";
 
 const { BASE_URL } = process.env;
 
